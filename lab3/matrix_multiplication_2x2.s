@@ -12,27 +12,10 @@ res:.word 0,0,0
     .word 0,0,0
     .word 0,0,0
 
-LDR r0,=m1
-LDR r2,=m2
-LDR r3,=res
-MOV r8,#9
-
-loop:
-  LDR r4,[r0],#4
-  LDR r5,[r2],#4
-  ADD r6,r4,r5
-
-;alter code
-;  Write a program to perform  2X2 matrix addition.
-
-A:.word 1,2,3,4,5,6,7,8,9
-B:.word 9,8,7,6,5,4,3,2,1
-C:.word 0,0,0,0,0,0,0,0,0
-
 MOV R0,#3
-LDR R4,=A
-LDR R5,=B
-LDR R6,=C
+LDR R4,=m1
+LDR R5,=m2
+LDR R6,=res
 
 outer:
 SUB R0,R0,#1
